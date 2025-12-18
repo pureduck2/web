@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cl_20251027</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Prosty System Oceniania 📚</h1>
+      <form>
+        <label for="subject">Przedmiot:</label>
+        <input type="text" name="subject" id="subject" placeholder="np. Matematyka">
+        <label for="grade">Ocena:</label>
+        <input type="text" name="grade" id="grade" placeholder="np. 4.5">
+        <button>Dodaj ocenę</button>
+      </form>
+      <div>
+        <p id="average-grade">Średnia ocen:</p>
+        <div>
+          Oceny:
+          <ul id="grades"></ul>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

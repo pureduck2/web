@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cl_20251104</title>
+</head>
+<body>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Obudowa światła */
+    #traffic-light {
+      background-color: #333;
+      width: 100px;
+      padding: 15px;
+      border-radius: 10px;
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* Domyślny wygląd "zgaszonego" światła */
+    .light {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-color: #111;
+      /* Zgaszone */
+      opacity: 0.3;
+      transition: opacity 0.3s;
+    }
+
+    /* Style dla zapalonych świateł */
+    .light.red {
+      background-color: #F00;
+    }
+
+    .light.yellow {
+      background-color: #FF0;
+    }
+
+    .light.green {
+      background-color: #0F0;
+    }
+
+    /* Klasa 'active' sprawia, że światło "świeci" */
+    .light.active {
+      opacity: 1;
+    }
+  </style>
+  <h1>Symulator Światła Drogowego</h1>
+  <button id="start-button">START</button>
+  <div id="traffic-light">
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
