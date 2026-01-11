@@ -1,0 +1,162 @@
+:root {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar__title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.destinations__title {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.weather-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.weather-card--hidden {
+    display: none;
+}
+
+.weather-card__row {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.weather-card__info {
+    margin-bottom: 15px;
+}
+
+.weather-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.weather-card__input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.weather-card__button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.weather-card__button:hover {
+    background-color: #2980b9;
+}
+
+.destinations__list {
+    list-style: none;
+    padding: 0;
+}
+
+.destinations__empty-msg {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+.destinations__item {
+    background: white;
+    border-left: 5px solid #2eec71;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.destinations__item:hover {
+    transform: translateX(2px);
+}
+
+.destinations__item-note {
+    display: block;
+    color: #2c3e50;
+}
+
+.destinations__item-meta {
+    color: #7f8c8d;
+    display: block;
+    margin-top: 4px;
+}
+
+.destinations__item-coords {
+    font-size: 0.8em;
+    color: #aaa;
+    display: block;
+    margin-top: 2px;
+}
+
+.map {
+    flex-grow: 1;
+    height: 100%;
+    z-index: 1;
+}

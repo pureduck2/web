@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Krypto-Inwestora</title>
+  </head>
+  <body>
+    <div class="app">
+      <section class="cryptocurrencies">
+        <table class="cryptocurrencies__table">
+          <thead class="cryptocurrencies__head">
+            <tr>
+              <th class="cryptocurrencies__header">Nazwa</th>
+              <th class="cryptocurrencies__header cryptocurrencies__header-price cryptocurrencies__header--sortable">
+                Cena <span class="cryptocurrencies__header-sort-order"></span>
+              </th>
+              <th class="cryptocurrencies__header cryptocurrencies__header-change24h cryptocurrencies__header--sortable">
+                Zmiana 24h <span class="cryptocurrencies__header-sort-order"></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="cryptocurrencies__body"></tbody>
+        </table>
+      </section>
+      <div class="cryptocurrency">
+        <section class="chart">
+          <canvas class="chart__canvas"></canvas>
+        </section>
+        <section class="calculator">
+          <h2 class="calculator__title">Kalkulator</h2>
+          <div class="calculator__from">
+            <input type="number" name="from" id="cryptocurrency-from" class="calculator__input" placeholder="Kwota">
+            <span class="calculator__currency">PLN</span>
+          </div>
+          <div class="calculator__result"></div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

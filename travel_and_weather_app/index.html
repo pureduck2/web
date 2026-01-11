@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planer Podróży</title>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <aside class="sidebar">
+        <h1 class="sidebar__title">Planer podróży</h1>
+        <div id="selection-panel" class="weather-card weather-card--hidden">
+          <h3 class="weather-card__title">Wybrane miejsce</h3>
+          <div class="weather-card__info">
+            <p class="weather-card__row"><strong>Współrzędne:</strong> <span class="weather-card__coords">-</span></p>
+            <p class="weather-card__row"><strong>Temperatura:</strong> <span class="weather-card__temp">-</span></p>
+            <p class="weather-card__row"><strong>Warunki:</strong> <span class="weather-card__cond">-</span></p>
+          </div>
+          <div class="weather-card__actions">
+            <input type="text" name="note-input" id="note-input" class="weather-card__input" placeholder="Notatka">
+            <button id="add-btn" class="weather-card__button">Dodaj do listy</button>
+          </div>
+        </div>
+        <div class="destinations">
+          <h3 class="destinations__title">Moje cele podróży</h3>
+          <ul id="destinations-list" class="destinations__list">
+            <li class="destinations__empty-msg">Kliknij na mapę, aby dodać cel</li>
+          </ul>
+        </div>
+      </aside>
+      <main class="map"></main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
